@@ -1,0 +1,68 @@
+■CentOS 7 （WEBサーバー構築）
+
+1. タイムゾーンを東京に変更する
+
+$ sudo timedatectl set-timezone Asia/Tokyo
+
+------
+
+-2. SELinuxを無効にする
+
+$ sudo setenforce 0
+$ sudo vi /etc/selinux/config
+
+# This file controls the state of SELinux on the system.
+# SELINUX= can take one of these three values:
+# enforcing - SELinux security policy is enforced.
+# permissive - SELinux prints warnings instead of enforcing.
+# disabled - No SELinux policy is loaded.
+SELINUX=permissive もしくは、 
+SELINUX=disabled のどちらか。
+.
+.
+.
+
+:wq
+
+------------------------
+
+-3. Cron（noanacron）を入れる
+
+任意ですが、旧来のCronを動かせるようにしておくと便利です。 /etc/cron.d/dailyjobs が標準で動きます。
+
+```
+$ sudo dnf -y install cronie-noanacron
+$ sudo dnf -y remove cronie-anacron
+$ sudo systemctl start crond
+$ sudo systemctl enable crond
+
+
+--------------------------
+
+-4. yum インストール　もしくは、　最新にする
+
+$ yum install yum-utils	# インストール
+
+$ yum clean all && yum -y update # アップデート
+
+
+--------------------------
+
+-5. PHP の設定
+
+・ PHP 7.2 インストール
+```
+yum install php php-xml php-xmlrpc php-json php-mbstring php-gd php-pdo php-mysqlnd
+```
+
+・インストール後のパッケージ確認
+
+```
+yum list installed | grep php
+```
+
+・インストールできるPHP モジュール検索
+
+```
+yum list | grep php
+```

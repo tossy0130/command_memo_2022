@@ -1,0 +1,12 @@
+
+¡Ú‘±
+
+sqlite3 ./database.sqlite
+
+.show
+
+.table
+
+.schema
+
+.databases

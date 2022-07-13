@@ -1,0 +1,37 @@
+■ oracle SQLPlus コマンドまとめ
+
+
+
+・テーブル一覧 取得SQL (USER_TABLES)
+
+
+＃ SELECTTABLE_NAMEFROMUSER_TABLES
+ログインユーザーが所有するテーブル一覧を取得
+---------------------------------
+・テーブル一覧 取得SQL (ALL_TABLES)
+
+＃ SELECTTABLE_NAMEFROMALL_TABLES
+ログインユーザーがアクセスできるテーブル一覧を取得
+---------------------------------
+
+・テーブル一覧 取得SQL (DBA_TABLES)
+
+
+＃ SELECTTABLE_NAMEFROMDBA_TABLES
+データベース内のテーブル一覧を取得
+
+---------------------------------
+
+・カラム一覧 取得SQL (ALL_TAB_COLUMNS)
+
+
+＃ SELECTCOLUMN_NAMEFROMALL_TAB_COLUMNS
+ログインユーザーがアクセスできるカラム一覧を取得
+
+---------------------------------
+
+・カラム一覧 取得SQL (DBA_TAB_COLUMNS)
+
+
+＃ SELECTCOLUMN_NAMEFROMDBA_TAB_COLUMNS
+データベース内のカラム一覧を取得

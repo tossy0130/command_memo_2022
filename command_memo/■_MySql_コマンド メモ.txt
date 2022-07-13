@@ -1,0 +1,47 @@
+■ MySql コマンド
+
+https://qiita.com/acecrc/items/a72992a17968d3d9bc00#mysql%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E3%82%92%E7%A2%BA%E8%AA%8D
+
+--- mysql 起動
+＄ sudo service mysqld start
+
+--- ステータス　確認
+＄ sudo service mysqld status
+
+--- MySql バージョン確認
+＄ mysql --version
+
+--- MySQLへの接続
+＄ mysql -u root -p
+
+--- データベース一覧　表示
+＄ show databases;
+
+--- テーブル一覧　表示
+＄ show tables;
+
+--- MySQLで使用されている文字コードの確認
+＄ SHOW VARIABLES LIKE "chara%";
+
+
+############################################ 
+
+--- データベース作成
+＄ CREATE DATABASE sample;
+
+--- データベースの削除
+
+＄ DROP DATABASE sample;
+
+--- データベース 選択
+＄ use データベース名;
+
+--- テーブル構造を確認
+＄ desc テーブル名;
+
+--- カラムの削除（全件）
+＄ DELETE FROM sample.todos;
+
+--- テーブルの削除
+＄ DROP TABLE todos;
+
